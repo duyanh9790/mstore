@@ -1,0 +1,36 @@
+.container {
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin : 0px auto;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+
+.main-font {
+    font-family: "Roboto",sans-serif;
+}
+
+.second-font {
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading {
+    font-size: 24px;
+    color: #252525;
+    font-weight: 500;
+}
+
+.heading + .decorate-heading {
+    position: absolute;
+    width: 49px;
+    height: 1px;
+    background-color: #252525;
+    margin-top: 6px;
+}
+
+.hidden {
+    display: none;
+}

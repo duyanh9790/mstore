@@ -1,0 +1,77 @@
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+    .column2-footer ul:last-child {
+        margin-left: 30px;
+    }
+    .shoes-collection > div {
+        background-position: left;
+    }
+    .main-product > div > div h2 {
+        font-size: 28px;
+    }
+}
+
+/* Tablet and Mobile */
+@media screen and (max-width: 1023px) {
+    .header > div .navigation {
+        display: none;
+    }
+    .header > div > h1 {
+        order: 2;
+    }
+    .bars-navigation {
+        order: 3;
+        display: block;
+    }
+    .main-product > div {
+        width: 100%;
+    }
+    .product-for-girl > div {
+        left: 0;
+    }
+    .product-for-boy > div {
+        right: 0;
+    }
+    .shoes-collection-content {
+        max-width: 400px;
+    }
+    .product-item {
+        width: calc((100% / 2) - 22.5px);
+    }
+    .product-item:not(:nth-child(4n + 1)) {
+        margin-left: 0px;
+    }
+    .product-item:nth-child(2n) {
+        margin-left: 30px;
+    }
+    .blog-post-item {
+        width: calc(50% - 15px);
+        text-align: center;
+    }
+    
+    .blog-post-content .blog-post-item:nth-child(2) {
+        margin-left: 30px;
+    }
+    .blog-post-content .blog-post-item:nth-child(3) {
+        margin: 0px auto 20px;
+    }
+    .cal-and-commmet {
+        justify-content: center;
+    }
+    .banner-footer-form input {
+        width: 400px;
+    }
+    .banner-footer-content {
+        max-width: 250px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+    
+}
