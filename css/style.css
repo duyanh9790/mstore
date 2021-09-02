@@ -20,8 +20,7 @@
     color : #d7d7d7;
 }
 
-.wrap-sub-header div a:first-child::after {
-    content : "";
+.wrap-sub-header .line {
     height: 10px;
     padding: 0px 1px;
     background-color: #838588;
@@ -58,23 +57,64 @@
 
 .header > div > h1, 
 .header > div ul.card-list {
-    width: calc((270/1170)*100%) ;
+    max-width: 270px;
+    width: 100%;
 }
 
 .header > div .navigation {
+    height: 100%;
     font-size: 14px;
     font-weight: 300;
     flex: 1;
 }
 
+.header > div .navigation li {
+    transition: background-color 0.2s ease-in-out;
+    will-change: background-color;
+}
+
+.header > div .navigation li a {
+    display: block;
+    padding: 0px 23.5px;
+    line-height: 65px;
+    height: 100%;
+    color : #464646;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+}
+
+.header > div .navigation li a:hover {
+    opacity: 0.8;
+}
+
+.header > div .navigation li:hover {
+    background-color: #96dbc9 ;
+}
+
+.header > div > ul {
+    display: flex;
+    margin-left: 30px;
+}
+
 .bars-navigation {
     font-size: 24px;
     display: none;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
 }
 
 .bars-navigation:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+.mask {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navigation-mobile {
@@ -94,6 +134,8 @@
     top: 20px;
     padding: 8px;
     cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
 }
 
 .close-navigation:hover {
@@ -106,6 +148,8 @@
 
 .navigation-mobile .navigation-list li {
     margin: 4px 0px;
+    transition: background-color 0.2s ease-in-out;
+    will-change: background-color;
 }
 
 .navigation-mobile .navigation-list li a {
@@ -113,6 +157,8 @@
     font-size: 16px;
     color : #464646;
     padding: 20px 24px;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
 }
 
 .navigation-mobile .navigation-list li a:hover {
@@ -128,29 +174,21 @@ header > div ul.navigation-list {
     display: block;
 }
 
-.header > div .navigation li a {
-    color : #464646;
-}
-
-.header > div .navigation li a:hover {
-    opacity: 0.8;
-}
-
-.header > div .navigation li:not(:first-child) {
-    margin-left: 47px;
-}
-
-.header > div > ul {
-    display: flex;
-    margin-left: 30px;
-}
-
 .header > div ul.card-list {
     justify-content: flex-end;
 }
 
 .header > div ul.card-list li:not(:first-child) {
     margin-left: 24px;
+}
+
+.header > div ul.card-list li a {
+    transition: opacity 0.15s ease-in-out;
+    will-change: opacity;
+}
+
+.header > div ul.card-list li a:hover {
+    opacity: 0.8;
 }
 
 .header > div ul.card-list .cart a {
@@ -173,7 +211,7 @@ header > div ul.navigation-list {
     font-weight: 500;
 }
 
-.header > div ul.card-list.cart > span {
+.header > div ul.card-list .cart > span {
     font-size: 11px;
     font-weight: bold;
     color : #252525;
@@ -223,6 +261,19 @@ header > div ul.navigation-list {
     margin-bottom: 29px;
 }
 
+.shopping-now a ,
+.discover a , 
+.read-more a {
+    transition: opacity 0.2s ease-in-out;
+    will-change: opactity;
+}
+
+.shopping-now a:hover ,
+.discover a:hover , 
+.read-more a:hover {
+    opacity: 0.85;
+}
+
 .shopping-now a span ,
 .discover a span ,
 .read-more a span {
@@ -242,6 +293,7 @@ header > div ul.navigation-list {
 
 .product-header ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .product-header ul li {
@@ -280,7 +332,8 @@ header > div ul.navigation-list {
 }
 
 .main-product > div {
-    width: 570px;
+    max-width: 570px;
+    width: 100%;
     height: 400px;
     position: relative;
 }
@@ -301,11 +354,13 @@ header > div ul.navigation-list {
 .product-for-boy > div {
     right: 16px;
     max-width: 255px;
+    text-align: right;
 }
 
 .product-for-girl > div {
     left: 21px;
     max-width: 270px;
+    text-align: left;
 }
 
 .main-product > div > div h2 {
@@ -413,6 +468,13 @@ header > div ul.navigation-list {
     font-weight: 300;
     color : #636363;
     text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+    will-change: color;
+}
+
+.feature-product-header h4:hover ,
+.best-seller-product-header h4:hover {
+    color : #000;
 }
 
 .feature-product-content > div {
@@ -433,6 +495,7 @@ header > div ul.navigation-list {
     height: 420px;
     position: relative;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .product-item:not(:nth-child(4n + 1)) {
@@ -490,11 +553,18 @@ header > div ul.navigation-list {
     background-color: #fff ;
     bottom: 100px;
     opacity: 0;
-    transition: all ease-in 0.35s;
+    transition: opacity 0.35s ease-in;
+    will-change: opacity;
 }
 
 .product-info > div {
     margin-left: 31px;
+    transition: opactity 0.2s ease-in-out;
+    will-change: opacity;
+}
+
+.product-info > div:hover {
+    opacity: 0.85;
 }
 
 .product-info .cart {
@@ -549,6 +619,7 @@ header > div ul.navigation-list {
     right: 5px;
     color : #b7b7b7;
     transition: color 0.1s ease-in;
+    will-change: color;
 }
 
 .rate-star i:hover{
@@ -608,6 +679,12 @@ header > div ul.navigation-list {
     font-weight: 300;
     color : #636363;
     margin-left: 3px;
+    transition: color 0.2s ease-in-out;
+    will-change: color;
+}
+
+.banner-save-up-content a:hover {
+    color: #000;
 }
 
 .introduction {
@@ -634,7 +711,9 @@ header > div ul.navigation-list {
 
 .introduction-content > div {
     position: relative;
-    width: 430px;
+    max-width: 430px;
+    width: 100%;
+    padding: 0px 18px;
     margin: 0px auto;
     text-align: center;
 }
@@ -728,13 +807,14 @@ header > div ul.navigation-list {
     position: absolute;
     top : 0px;
     left: 60px;
-    transform: translateY(-50%);
+    z-index: 2;
 }
 
 .best-seller-product-content .product-item:last-child > div a {
     font-weight: 300;
     color: #252525;
     text-transform: uppercase;
+    line-height: 12px;
 }
 
 .best-seller-product-content .product-item:last-child > div span {
@@ -761,6 +841,7 @@ header > div ul.navigation-list {
     height: 428px;
     width: calc((100% / 3 ) - 20px);
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .blog-post-content .blog-post-item:not(:first-child) {
@@ -861,6 +942,13 @@ header > div ul.navigation-list {
     width: 100px;
     background-color: #00c8c8;
     border-radius: 4px;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
+}
+
+.banner-footer-form button:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .banner-footer-form button span {
@@ -873,19 +961,19 @@ header > div ul.navigation-list {
 }
 
 .footer .background-footer {
-    height: 470px;
-    background-color: #31353d;
+    min-height: 470px;
+    background-color: #363a42;
 }
 
 .background-footer > div {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .column1-footer {
-    max-width: calc((370/1170) * 1170);
-    width: 100%;
-    margin-right: 30px;
-    margin-left: 33px;
+    width: 31.62%;
+    background-color: #31353d;
+    padding-left: 33px;
 }
 
 .column1-footer > a img {
@@ -894,6 +982,9 @@ header > div ul.navigation-list {
 }
 
 .column1-footer .desc p {
+    display: block;
+    max-width: 300px;
+    width: 100%;
     color: #868686;
     font-weight: 300;
     line-height: 24px;
@@ -922,6 +1013,8 @@ header > div ul.navigation-list {
 .social i {
     font-size: 16px;
     color: white;
+    transition: color 0.2s ease-in-out;
+    will-change: color;
 }
 
 .social a:not(:first-child) {
@@ -933,8 +1026,8 @@ header > div ul.navigation-list {
 }
 
 .column2-footer {
-    max-width: calc((370/1170) * 1170);
-    width: 100%;
+    max-width: 400px;
+    width: 34.18%;
     display: flex;
 }
 
@@ -952,10 +1045,16 @@ header > div ul.navigation-list {
     color : #ccc;
     font-weight: 300;
     line-height: 48px;
+    transition: opacity 0.2s ease-in-out;
+    will-change: opacity;
 }
 
 .column2-footer ul li a:hover {
     opacity: 0.8;
+}
+
+.column2-footer ul:first-child {
+    margin-left: 30px;
 }
 
 .column2-footer ul:last-child{
@@ -964,8 +1063,7 @@ header > div ul.navigation-list {
 }
 
 .column3-footer {
-    max-width: calc((400/1170) * 1170);
-    width: 100%;
+    width: 34.2%;;
 }
 
 .column3-footer .map {

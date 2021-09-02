@@ -1,4 +1,10 @@
-@media screen and (min-width: 1024px) and (max-width: 1366px){
+@media screen and (min-width: 1024px) and (max-width: 1300px){
+    .product-header {
+        padding: 24px 10px;
+    }
+    .product-header ul li:not(:first-child) {
+        margin-left: 20px;
+    }
     .column2-footer ul:last-child {
         margin-left: 30px;
     }
@@ -7,6 +13,42 @@
     }
     .main-product > div > div h2 {
         font-size: 28px;
+    }
+    .best-seller-product-header {
+        max-width: 670px;
+    }
+    .best-seller-product-content .product-item:last-child > div {
+        left: 24px;
+    }
+    .blog-post-item {
+        height: 428px;
+        width: calc((100% / 3 ) - 13.33px);
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .blog-post-content .blog-post-item:not(:first-child) {
+        margin-left: 20px;
+    }
+}
+
+/* < Low resolution PC */
+@media screen and (max-width: 1200px){
+    .main-product > div {
+        max-width: 100%;
+        width: 100%;
+    }
+    .main-product > div:first-child {
+        margin-bottom: 10px;
+    }
+    .product-for-girl > div {
+        left: 10%;
+    }
+    .product-for-boy > div {
+        right: 10%;
+    }
+    .main-product > div > div {
+        max-width: 370px;
+        text-align: center
     }
 }
 
@@ -18,18 +60,21 @@
     .header > div > h1 {
         order: 2;
     }
+    .header > div ul.card-list {
+        margin-left: 0px;
+    }
     .bars-navigation {
         order: 3;
         display: block;
     }
-    .main-product > div {
-        width: 100%;
+    .main-product > div > div {
+        max-width: 300px;
     }
     .product-for-girl > div {
-        left: 0;
+        left: 5%;
     }
     .product-for-boy > div {
-        right: 0;
+        right: 5%;
     }
     .shoes-collection-content {
         max-width: 400px;
@@ -43,11 +88,13 @@
     .product-item:nth-child(2n) {
         margin-left: 30px;
     }
+    .rate-star {
+        margin-right: 34px;
+    }
     .blog-post-item {
         width: calc(50% - 15px);
         text-align: center;
     }
-    
     .blog-post-content .blog-post-item:nth-child(2) {
         margin-left: 30px;
     }
@@ -63,6 +110,25 @@
     .banner-footer-content {
         max-width: 250px;
     }
+    .column1-footer,.column2-footer {
+        width: 50%;
+    }
+    .column2-footer ul:first-child li:nth-of-type(1) {
+        margin-top: 60px;
+    }
+    .column2-footer ul:last-child li:nth-of-type(1) {
+        margin-top: 25px;
+    }
+    .column3-footer {
+        width: 100%;
+        height: 370px!important;
+    }
+    .column3-footer .map iframe {
+        width: 100%;
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
 /* Tablet */
@@ -71,7 +137,6 @@
 }
 
 /* Mobile */
-
 @media screen and (max-width: 767px) {
     
 }
