@@ -12,27 +12,28 @@ function handeNavigationMobile() {
     btnCloseNavigation.onclick = function() {
         if(navigationMobile) {
             closeNavigationMobile();
+            toggleHiddenMask();
         }
     }
 
     btnOpenNavigation.onclick = function() {
         if(navigationMobile) {
             openNavigationMobile();
-            mask.classList.toggle('hidden');
+            toggleHiddenMask();
         }
         console.log('aa')
     }
 
     mask.onclick = function() {
         if(mask) {
-            mask.classList.toggle('hidden');
+            toggleHiddenMask();
             closeNavigationMobile();
         }
     }
 
     navigationItems.forEach(function(item) {
         item.onclick = function() {
-            mask.classList.toggle('hidden');
+            toggleHiddenMask();
             closeNavigationMobile();
         }
     })
@@ -42,5 +43,10 @@ function handeNavigationMobile() {
     }
     function openNavigationMobile() {
         navigationMobile.style.right = '0' + 'px';
+    }
+    function toggleHiddenMask() {
+        if(mask){
+            mask.classList.toggle('hidden');
+        }
     }
 }

@@ -62,10 +62,39 @@
     }
     .header > div ul.card-list {
         margin-left: 0px;
+        justify-content: flex-start;
+    }
+    .best-seller-product-content .product-item:last-child img {
+        width: 100%;
     }
     .bars-navigation {
         order: 3;
         display: block;
+    }
+    .banner-save-up-content h4 {
+        font-size: 16px;
+    }
+    .rate-star {
+        margin-right: 34px;
+    }
+    .column3-footer .map iframe {
+        width: 100%;
+        height: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sub-header {
+        height: 40px;
+    }
+    .wrap-sub-header div {
+        margin-top: 22px;
+    }
+    .header {
+        height: 58px;
     }
     .home-content h2 {
         font-size: 60px;
@@ -73,23 +102,29 @@
     .main-product > div > div {
         max-width: 300px;
     }
-    .product-for-girl > div {
-        left: 5%;
-    }
-    .product-for-boy > div {
-        right: 5%;
-    }
     .shoes-collection-content {
         max-width: 400px;
     }
     .shoes-collection-content p {
         margin-bottom: 26px;
     }
+    .product-item {
+        width: calc((100% / 2) - 22.5px);
+    }
+    .product-item:not(:nth-child(4n + 1)) {
+        margin-left: 0px;
+    }
+    .product-item:nth-child(2n) {
+        margin-left: 30px;
+    }
+    .product-for-girl > div {
+        left: 5%;
+    }
+    .product-for-boy > div {
+        right: 5%;
+    }
     .banner-save-up-content {
         right: 80px;
-    }
-    .banner-save-up-content h4 {
-        font-size: 16px;
     }
     .banner-save-up-content h2 {
         font-size: 46px;
@@ -114,31 +149,6 @@
         top: 60px;
         right: 170px;
     }
-    .product-item {
-        width: calc((100% / 2) - 22.5px);
-    }
-    .product-item:not(:nth-child(4n + 1)) {
-        margin-left: 0px;
-    }
-    .product-item:nth-child(2n) {
-        margin-left: 30px;
-    }
-    .rate-star {
-        margin-right: 34px;
-    }
-    .blog-post-item {
-        width: calc(50% - 15px);
-        text-align: center;
-    }
-    .blog-post-content .blog-post-item:nth-child(2) {
-        margin-left: 30px;
-    }
-    .blog-post-content .blog-post-item:nth-child(3) {
-        margin: 0px auto 20px;
-    }
-    .cal-and-commmet {
-        justify-content: center;
-    }
     .banner-footer-form input {
         width: 400px;
     }
@@ -158,20 +168,257 @@
         width: 100%;
         height: 370px!important;
     }
-    .column3-footer .map iframe {
-        width: 100%;
-        height: 100%;
-        padding-top: 15px;
-        padding-bottom: 15px;
+    .blog-post-item {
+        width: calc(50% - 15px);
+        text-align: center;
     }
-}
-
-/* Tablet */
-@media screen and (max-width: 1023px) {
-    
+    .blog-post-content .blog-post-item:nth-child(2) {
+        margin-left: 30px;
+    }
+    .blog-post-content .blog-post-item:nth-child(3) {
+        margin: 0px auto 20px;
+    }
+    .cal-and-commmet {
+        justify-content: center;
+    }
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    
+    .heading {
+        font-size: 20px;
+    }
+    .sub-header {
+        display: none;
+    }
+    .header > div > h1 {
+        display: none;
+    }
+    #home {
+        height: 500px;
+    }
+    .home-content {
+        margin-left: 30px;
+    }
+    .home-content h3 {
+        font-size: 12px;
+    }
+    .home-content .home-heading {
+        max-width: 80px;
+    }
+    .home-content h2 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+    .home-content p {
+        display: block;
+        font-size: 12px;
+        max-width: 300px;
+    }
+    .product-header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .product-header ul li {
+        width: calc((100% / 2 ) - 10px);
+        margin-bottom: 10px;
+        height: 56px;
+    }
+    .product-header ul li:not(:first-child) {
+        margin: 0px;
+    }
+    .product-header ul li:nth-child(2n+2) {
+        margin-left: 10px;
+    }
+    .product-header ul li div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 18px;
+    }
+    .product-header ul li div h3 {
+        font-size: 13px;
+    }
+    .product-header ul li div p {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+    .product-link {
+        overflow: hidden;
+    }
+    .product-link > img {
+        width: 100%;
+        height: 350;
+        object-fit: cover;
+    }
+    .main-product > div > div {
+        max-width: 270px;
+    }
+    .main-product > div > div > span:first-child {
+        font-size: 12px;
+    }
+    .product-for-boy {
+        background-position: 68%;
+    }
+    .product-for-boy > div {
+        text-align: right!important;
+        right: 0px;
+    }
+    .product-for-girl {
+        background-position: 28%;
+    }
+    .product-for-girl > div {
+        text-align: left!important;
+        left: 0px;
+    }
+    .main-product > div > div h2 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    .main-product > div > div .price {
+        font-size: 24px;
+    }
+    .main-product > div > div p {
+        margin-top: 12px;
+        margin-bottom: 26px;
+        font-weight: 300;
+    }
+    .shoes-collection > div {
+        background-position: 45%;
+    }
+    .shoes-collection-content {
+        max-width: 250px;
+        text-align: left;
+    }
+    .shoes-collection-content {
+        left: 10px;
+        top: 70px;
+    }
+    .shoes-collection-content h3 {
+        font-size: 12px;
+    }
+    .shoes-collection-content h2 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+    .shoes-collection-content p {
+        display: block;
+        margin-bottom: 20px;
+        width: 220px;
+    }
+    .product-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .product-item:not(:nth-child(4n + 1)) {
+        margin-left: 0px;
+    }
+    .banner-save-up-content {
+        right: 100px;
+    }
+    .banner-save-up-content h3 {
+        font-size: 18px;
+        word-spacing: initial;
+        letter-spacing: initial;
+        max-width: 270px;
+    }
+    .banner-save-up-content h2 {
+        font-size: 34px;
+    }
+    .banner-save-up-content a {
+        margin-left: 0px;
+        color: #96dbc9;
+    }
+    .introduction {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .introduction > div {
+        flex-direction: column;
+    }
+    .introduction > div > div {
+        width: 100%;
+    }
+    .introduction-content h2 {
+        font-size: 26px;
+    }
+    .introduction-content .desc p {
+        line-height: 28px;
+        margin-bottom: 28px;
+    }
+    .best-seller-product .summer-sale {
+        top: 60px;
+        right: 20px;
+    }
+    .best-seller-product .summer-sale h3 {
+        font-size: 20px;
+    }
+    .best-seller-product .summer-sale span {
+        font-size: 46px;
+    }
+    .discover-now {
+        top: 96px;
+        right: 100px;
+    }
+    .blog-post-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .blog-post-content .blog-post-item:nth-child(2),
+    .blog-post-content .blog-post-item:not(:first-child) {
+        margin-left: 0px;
+    }
+    .banner-footer > div {
+        flex-direction: column;
+    }
+    .banner-footer-content {
+        margin-top: 26px;
+    }
+    .banner-footer-form {
+        width: 90%;
+        margin: 0px auto;
+    }
+    .banner-footer-form form ,
+    .banner-footer-form input {
+        width: 100%;
+    }
+    .banner-footer-form button {
+        margin-bottom: 8px;
+    }
+    .background-footer > div > div {
+        width: 100%;
+        height: 300px;
+    }
+    .column1-footer > a img {
+        margin-top: 20px;
+    }
+    .column1-footer .desc p {
+        margin-top: 14px;
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+    .info-footer div:nth-child(2) {
+        margin: 8px 0px;
+    }
+    .info-footer div:last-child {
+        margin-bottom: 30px;
+    }
+    .column2-footer ul h3 {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .column2-footer ul:first-child li:nth-of-type(1) {
+        margin-top: 20px;
+    }
+    .column2-footer ul:last-child {
+        margin-top: 37px;
+        margin-left: 68px;
+    }
+    .footer div.copyright {
+        height: 30px;
+    }
+    .column3-footer {
+        height: 300px!important;
+    }
 }

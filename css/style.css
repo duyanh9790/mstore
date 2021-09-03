@@ -695,7 +695,7 @@ header > div ul.navigation-list {
 
 .introduction > div {
     display: flex;
-    height: 400px;
+    min-height: 400px;
 }
 
 .introduction > div > div {
