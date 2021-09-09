@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
+    height: 100%;
 }
 
 .header > div > h1, 
@@ -93,6 +93,7 @@
 
 .header > div > ul {
     display: flex;
+    align-items: center;
     margin-left: 30px;
 }
 
@@ -178,8 +179,16 @@ header > div ul.navigation-list {
     justify-content: flex-end;
 }
 
+.header > div ul.card-list li:not(:last-child) {
+    padding: 4px;
+}
+
 .header > div ul.card-list li:not(:first-child) {
-    margin-left: 24px;
+    margin-left: 20px;
+}
+
+.header > div ul.card-list li:last-child a {
+    padding-top: 7px;
 }
 
 .header > div ul.card-list li a {
@@ -193,12 +202,13 @@ header > div ul.navigation-list {
 
 .header > div ul.card-list .cart a {
     position: relative;
+    padding: 11px 4px 4px;
 }
 
 .header > div ul.card-list .cart a span {
     position: absolute;
-    top : -10px;
-    right: -3px;
+    top : 0px;
+    right: -1px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -510,6 +520,7 @@ header > div ul.navigation-list {
 .product-item > a{
     display: block;
     height: 350px;
+    overflow: hidden;
 }
 
 .product-content > .product-lable {
@@ -819,10 +830,6 @@ header > div ul.navigation-list {
     flex-wrap: wrap;
 }
 
-.best-seller-product-content .product-item:last-child > a {
-    height: 420px;
-}
-
 /* Blog Post*/
 
 .blog-post {
@@ -982,7 +989,7 @@ header > div ul.navigation-list {
     display: block;
     max-width: 300px;
     width: 100%;
-    color: #868686;
+    color : #868686;
     font-weight: 300;
     line-height: 24px;
     margin-top: 24px;

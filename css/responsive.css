@@ -191,8 +191,14 @@
     .sub-header {
         display: none;
     }
+    .header {
+        height: 54px;
+    }
     .header > div > h1 {
         display: none;
+    }
+    .header > div ul.card-list .cart > span {
+        margin-left: 6px
     }
     #home {
         height: 500px;
@@ -397,6 +403,12 @@
         margin-bottom: 20px;
         line-height: 20px;
     }
+    .social > a {
+        padding: 4px;
+    }
+    .social a:not(:first-child) {
+        margin-left: 20px;
+    }
     .info-footer div:nth-child(2) {
         margin: 8px 0px;
     }
@@ -412,8 +424,12 @@
         margin-top: 20px;
     }
     .column2-footer ul:last-child {
-        margin-top: 37px;
+        margin-top: 62px;
         margin-left: 68px;
+    }
+    .column2-footer ul li a {
+        padding: 12px;
+        margin-left: -12px;
     }
     .footer div.copyright {
         height: 30px;
